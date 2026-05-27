@@ -2,8 +2,7 @@ console.log('Lesson 05 starter loaded');
 
 // 1. Selecting elements
 const title = document.querySelector('#page-title');// selecting with id
-const tagline = document.querySelector('.tagline');// selecting with classname
-// const tagLine = document.getElementByClassName('tagline');
+const tagline = document.querySelector('.tagline');// selecting with classname // const tagLine = document.getElementByClassName('tagline');
 const heroImg = document.querySelector('#hero-img');
 const heroCaption = document.querySelector('#hero-caption');
 const dynamicBox = document.querySelector('#dynamic-box');
@@ -25,26 +24,31 @@ heroImg.setAttribute('alt', 'A replaceable sample image'); // 'alt='A replacable
 heroImg.style.borderColor = `#0d6efd`;
 console.warn('name');
 
-if (!x) { // checks if x does not exist.
-  console.log('x does not exist');
-}
-
 // 4. Create small helper functions for reuse
 function updateText(selector, text) {
   const el = document.querySelector(selector);
   if (!el) {
     return console.warn('No element is found for', selector);
-  }
-  else {
+  } else {
     el.textContent = text;
   }
 }
+
+function updateHTML(selector, code) {
+  const el = document.querySelector(selector);
+  if (!el) {
+    return console.warn('No element is found for', selector);
+  } else {
+    el.innerHTML = code;
+  }
+}
 // 5. Use helpers to perform simple tasks
-
+updateText(`.tagline`, `Selecting reading and modifying nodes with javascript. `);
+updateHTML(`#dynamic-box`, `<p class="desc"> Replaced dynamic box again with <em>updateHTML</em>. It can include <strong>bolded words</strong>.</p>`);
 // 6. Footer text tweak (demonstrate class toggle & style change)
-
+footerNote.classList.add('footer-strong');
 // Require innerHTML here to render the &copy; entity correctly
-
+footerNote.innerHTML = `&copy; 2026 Front End Fundamentals.`;
 // functions intro
 // function definition
 function greeting() {
@@ -75,8 +79,7 @@ console.log(square(2));
 function check(num) {
   if (num % 2 === 0) {
     return ('even number');
-  }
-  else {
+  } else {
     return ('number  is odd');
   }
 }
