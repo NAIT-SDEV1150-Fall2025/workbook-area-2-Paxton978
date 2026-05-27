@@ -2,11 +2,13 @@ console.log('Lesson 05 starter loaded');
 
 // 1. Selecting elements
 const title = document.querySelector('#page-title');// selecting with id
+// eslint-disable-next-line no-unused-vars
 const tagline = document.querySelector('.tagline');// selecting with classname // const tagLine = document.getElementByClassName('tagline');
 const heroImg = document.querySelector('#hero-img');
 const heroCaption = document.querySelector('#hero-caption');
 const dynamicBox = document.querySelector('#dynamic-box');
 const footerNote = document.getElementById('footer-note');
+// eslint-disable-next-line no-unused-vars
 const tagName = document.getElementsByTagName('h1');
 // # for id, . for classname, no symbol for tagname. (only when using query selector)
 // query selector selects the first ocurence of the tag.
